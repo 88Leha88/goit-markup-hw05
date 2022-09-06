@@ -103,6 +103,12 @@ ul,ol{
 .header-navigate-list{
     position: relative;
 }
+
+.navigate.current{
+    color: var(--links-h-f-color);
+}
+
+
 .navigate{
     display: block;
     font-weight: 500;
@@ -172,8 +178,9 @@ ul,ol{
     background-color: var(--hero-bcg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-hero.jpg);
     background-position:center center;
-    background-size: cover;
+    background-size: 1600px;
     background-color: var(--bcg-hero);
+    background-repeat: no-repeat;
 }
 
 .hero-box{
@@ -213,9 +220,6 @@ ul,ol{
     border: none;
     color: var(--hero-text-btn);
     cursor: pointer;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* секція особливості */
@@ -406,6 +410,7 @@ ul,ol{
     height: 20px;
     width: 20px;
     fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Постійні кліенти */
@@ -442,7 +447,7 @@ ul,ol{
     height: 92px;
     background-color: var(--bcg-white);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                border color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -580,6 +585,9 @@ ul,ol{
 
 /* кнопка */
 
+.header-portfolio{
+    border-bottom: 1px solid #ECECEC;
+}
 
 .page-portfolio{
     padding-top: 94px;
@@ -605,6 +613,7 @@ ul,ol{
     color: #212121;
     background-color: #F5F4FA;
     cursor: pointer;
+    border-radius: 4px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
                 background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
                 box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -621,7 +630,7 @@ ul,ol{
 /* фильтри та карточки */
 
 .item-card{
-    flex-basis: calc(100%-60px) / 3;
+    flex-basis: calc((100% - 60px) / 3);
 }
 
 .card-container{
@@ -660,8 +669,8 @@ ul,ol{
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.item-card:hover .overlay,
-.item-card:focus .overlay{
+.page-portfolio-card:hover .overlay,
+.page-portfolio-card:focus .overlay{
     transform: translateY(0%);
 }
 
