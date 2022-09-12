@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body class="main">
-    <!--шапка з навигаціей-->
+<!--шапка з навигаціей-->
     <header class="header">
         <div class="container header-page header-container">
             <nav class="header-container"> 
@@ -41,16 +41,17 @@
             </ul>
         </div>        
     </header>
-    <!--блок герой-->
+<!--шапка з навигаціей-->
+<!--блок герой-->
     <main>
         <section class="hero">
             <div class="container hero-box">
                 <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
                 <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
-            </div>
-            
+            </div>            
         </section>
-        <!--особливості-->
+<!--блок герой-->
+<!--особливості-->
         <section class="features">
             <h2 class="features-title visually-hidden">Особливості</h2>
                  <div class="container">
@@ -110,7 +111,8 @@
                     </ul>       
                  </div>
         </section>
-        <!--чим займаемось-->
+<!--особливості-->
+<!--чим займаемось-->
         <section class="portfolio">
             <div class="container">
                 <h2 class="title portfolio-title">Чим ми займаємося</h2>
@@ -148,7 +150,8 @@
                 </ul>
             </div>        
         </section>
-        <!--наша команда-->
+<!--чим займаемось-->
+<!--наша команда-->
         <section class="team">
             <div class="container">
                 <h2 class="title team-tatle">Наша команда</h2>
@@ -306,7 +309,8 @@
                 </ul>
             </div>            
         </section>
-        <!--Постійні кліенти-->
+<!--наша команда-->
+<!--Постійні кліенти-->
         <section class="client-container">
             <div class="container client-box">
                 <h2 class="title title-client">Постійні кліенти</h2>
@@ -357,7 +361,8 @@
            </div>
         </section>
     </main>
-    <!--footer-->
+<!--Постійні кліенти-->
+<!--footer-->
     <footer class="footer">
         <div class="footer-info container">
             <div class="footer-info-contacts">
@@ -404,9 +409,26 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+<!--footer-->
+<!-- footer form -->
+            <div class="footer-form-container">
+                <p class="footer-text">Підпишіться на розсилку</p>
+                <div class="footer-form-btn">
+                    <form class="footer-form">
+                        <input type="email" class="footer-field-form" placeholder="E-mail" required>
+                    </form>
+                    <button class="footer-btn-form" type="button">
+                        Підписатися
+                        <svg class="footer-icon-btn-form">
+                            <use href="./images/sprite.svg#icon-telegram"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>   
-        </div>
-        <!-- backdrop -->
+        </div> 
+<!-- footer form -->      
+<!-- backdrop -->        
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button class="modal-btn" type="button" data-modal-close>
@@ -414,10 +436,52 @@
                         <use href="./images/sprite.svg#icon-close"></use>
                     </svg>
                 </button>
-
+                <p class="modal-text">Залиште свої дані, ми вам передзвонимо</p>
+                <form class="modal-form">
+                    <label class="modal-title-field">
+                        <span class="modal-meaning">Ім'я</span>
+                        <span class="modal-form-conteyner">
+                            <input class="modal-field-form" type="text" required pattern="[a-zA-Zа-яА-ЯІіЇї]+" minlength="2" name="user_name">
+                            <svg class="modal-icon-form">
+                                <use href="./images/sprite.svg#icon-form-people"></use>
+                            </svg>
+                        </span>
+                    </label>
+                    <label class="modal-title-field">
+                        <span class="modal-meaning">Телефон</span>
+                        <span class="modal-form-conteyner">
+                            <input class="modal-field-form" type="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" name="user_phone">
+                            <svg class="modal-icon-form">
+                                <use href="./images/sprite.svg#icon-form-phone"></use>
+                            </svg>
+                        </span>
+                    </label>
+                    <label class="modal-title-field">
+                        <span class="modal-meaning">Пошта</span>
+                        <span class="modal-form-conteyner">
+                            <input class="modal-field-form" type="email" required name="user_post">
+                            <svg class="modal-icon-form">
+                                <use href="./images/sprite.svg#icon-form-post"></use>
+                            </svg>
+                        </span>                        
+                    </label>
+                    <label class="modal-title-field">
+                        <span class="modal-meaning">Коментар</span>
+                        <textarea class="modal-field-comments" name="user_comments" placeholder="Введіть текст"></textarea>
+                    </label>
+                    <label class="modal-y-n-title">
+                        <input class="modal-y-n-click" type="checkbox" required name="user-on-off">
+                        <svg class="modal-icon-form-checkbox">
+                            <use href="./images/sprite.svg#icon-form-checkbox-on"></use>
+                        </svg>
+                        <span class="modal-checkbox-text">Погоджуюся з розсилкою та приймаю&nbsp;</span><a class="modal-checkbox-text-link" href="#">Умови договору</a>
+                    </label>
+                    <button class="modal-btn-form" type="submit">Відправити</button>
+                </form>
             </div>
         </div>
     </footer>
     <script src="./js/modal.js"></script>
 </body>
 </html>
+ <!-- backdrop -->
