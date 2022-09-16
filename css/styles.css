@@ -791,7 +791,7 @@ img{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 528px;
-    height: 581px;
+    min-height: 581px;
     background-color: var(--bcg-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -804,7 +804,7 @@ img{
     width: 30px;
     height: 30px;
     padding: 0;
-    border: 1px solid #000000;
+    border: 1px solid #757575;
     border-radius: 50%;
     background-color: transparent;
     position: absolute;
@@ -815,6 +815,12 @@ img{
 .cross{
     width: 18px;
     height: 18px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cross:hover,
+.cross:focus{
+    fill: var(--links-h-f-color);
 }
 
 /* Стилі форми */
@@ -830,6 +836,7 @@ img{
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
+    margin-bottom: 12px;
 }
 
 .modal-form{
@@ -837,10 +844,9 @@ img{
     flex-direction: column;
 }
 
-.modal-title-field{
+.modal-title-field:not(:first-child){
     margin-top: 10px;
 }
-   
 
 
 .modal-field-form{
@@ -850,7 +856,7 @@ img{
     padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    margin-top: 4px;
+    
 }
 
 .modal-field-form:focus{
@@ -872,6 +878,7 @@ img{
 .modal-form-conteyner{
     display: block;
     position: relative;
+    margin-top: 4px;
 }
 
 .modal-field-form:focus + .modal-icon-form{
@@ -887,7 +894,10 @@ img{
     height: 18px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-    
+
+.modal-title-field-comments{
+    margin-bottom: 20px;
+}
 
 .modal-field-comments{
     width: 100%;
@@ -895,8 +905,7 @@ img{
     padding-left: 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    margin-top: 4px;
-    margin-bottom: 20px;
+    margin-top: 4px;   
     padding: 12px 16px;
     resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
